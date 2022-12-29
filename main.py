@@ -11,12 +11,12 @@ CONFIG_PATH = MODEL_PATH+'/my_ssd_mobnet/pipeline.config'
 CHECKPOINT_PATH = MODEL_PATH+'/my_ssd_mobnet/'
 
 CUSTOM_MODEL_NAME = 'my_ssd_mobnet'
-"""
+
 import tensorflow  as tf
 from object_detection.utils import config_util
- """
+
 print("""python {}/research/object_detection/model_main_tf2.py --model_dir={}/{} --pipeline_config_path={}/{}/pipeline.config --num_train_steps=5000""".format(APIMODEL_PATH, MODEL_PATH,CUSTOM_MODEL_NAME,MODEL_PATH,CUSTOM_MODEL_NAME))
-"""
+
 
 import os
 from object_detection.utils import label_map_util
@@ -83,5 +83,4 @@ while True:
 
     if cv2.waitKey(1) & 0xFF == ord('q'):
         cap.release()
-        break; 
-"""
+        break;
